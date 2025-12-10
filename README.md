@@ -1,78 +1,79 @@
+# 🚀 E2E Automation Framework para E-Commerce
 
-# 🛒 E-Shop
+## Visión General del Proyecto
 
-E-Shop is an online store built with **Next.js**, **React**, **Tailwind CSS**, and **FakeStoreAPI**. It allows users to browse products, add them to the cart, and simulate a shopping experience.
+Este repositorio aloja la suite de pruebas End-to-End (E2E) diseñada para asegurar la funcionalidad crítica de la plataforma de E-commerce.
 
-## 🚀 Getting Started
+El enfoque principal es la prevención de regresiones en el flujo de compra principal, asegurando una experiencia de usuario fluida y libre de errores críticos tras cada deployment.
 
-### 1️⃣ Installation
+---
 
-Clone the repository and navigate to the project folder:
+## 🛠️ Stack Tecnológico de Testing
+
+Este proyecto fue desarrollado utilizando las siguientes herramientas de automatización:
+
+- **Framework:** Cypress (JavaScript)
+- **Lenguaje:** JavaScript / TypeScript
+- **Gestión de Dependencias:** Node.js / npm
+
+---
+
+## 🎯 Cobertura de Pruebas (Casos Críticos)
+
+La suite de Cypress cubre los siguientes flujos críticos de negocio (El "Happy Path"):
+
+1. **Navegación:** Validación de la carga correcta de la página principal y las categorías.
+
+2. **Búsqueda:** Prueba de la funcionalidad de búsqueda de productos por nombre.
+
+3. **Flujo de Compra (Core):**
+   - Selección y adición de un producto al carrito.
+   - Actualización de la cantidad en el carrito.
+   - Eliminación de un producto del carrito.
+   - Navegación al checkout y validación de la información de resumen.
+
+4. **Validación de Formulario:** Prueba de los mensajes de error en los campos de formulario del checkout.
+
+---
+
+## ⚙️ Cómo Ejecutar las Pruebas
+
+Sigue estos pasos para descargar y ejecutar la suite de automatización en tu entorno local:
+
+### 1. Requisitos
+
+Asegúrate de tener Node.js y npm instalados.
+
+### 2. Instalación de Dependencias
+
+Clona el repositorio e instala las dependencias de Cypress:
 
 ```bash
-git clone https://github.com/your-username/eshop.git
-cd eshop
-```
-
-Install dependencies using **npm**, **yarn**, **pnpm**, or **bun**:
-
-```bash
+git clone https://github.com/tu-usuario/e-shop-qa-automation.git
+cd e-shop-qa-automation
 npm install
-# or
-yarn install
-# or
-pnpm install
-# or
-bun install
 ```
 
-### 2️⃣ Run in Development Mode
+### 3. Ejecución de la Suite
 
-Start the development server with:
+Para abrir la interfaz interactiva de Cypress y seleccionar la prueba:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx cypress open
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+Para ejecutar todos los tests en modo headless (terminal):
 
-## 🎨 Technologies Used
-
-- **Next.js** - Framework for React with hybrid rendering.
-- **React** - Library for building user interfaces.
-- **Tailwind CSS** - Utility-first CSS framework for fast and responsive design.
-- **FakeStoreAPI** - Product API to simulate an online store.
-
-## 🛠 Features
-
-✔️ Product listing with images, names, and prices.
-✔️ Shopping cart with add, remove, and quantity modification functionalities.
-✔️ Cart persistence using `localStorage`.
-✔️ Checkout page with total amount summary.
-✔️ Navigation bar with product search.
-✔️ Responsive and minimalistic design.
-
-## 📌 Project Structure
-
-```
-📦 eshop
-├── 📂 app
-│   ├── 📄 page.tsx (Main page with product listing)
-│   ├── 📂 cart (Shopping cart page)
-│   ├── 📂 checkout (Checkout page)
-│   ├── 📂 components (Reusable components)
-│   ├── 📂 lib (Types and helper functions)
-├── 📄 package.json (Dependencies and scripts)
-├── 📄 tailwind.config.js (Styling configuration)
-├── 📄 README.md (This file)
+```bash
+npx cypress run
 ```
 
-## Project Phase
-[ Beta ]
+---
 
+## 📈 Impacto y Estrategia de QA
+
+- **Metodología:** Aplicación de pruebas de Regresión Funcional para garantizar la fiabilidad del flujo de negocio más importante de la aplicación.
+
+- **Valor Añadido:** Reducción del tiempo de testing manual de X horas a una ejecución automatizada de Y segundos *(Rellena con valores aproximados para mostrar impacto)*.
+
+- **Debugging:** Uso de la funcionalidad de Time Travel Debugging de Cypress para simplificar la identificación y reporte de defectos.
