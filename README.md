@@ -74,6 +74,6 @@ npx cypress run
 
 - **Metodología:** Aplicación de pruebas de Regresión Funcional para garantizar la fiabilidad del flujo de negocio más importante de la aplicación.
 
-- **Valor Añadido:** Reducción del tiempo de testing manual de X horas a una ejecución automatizada de Y segundos *(Rellena con valores aproximados para mostrar impacto)*.
+- **Valor Añadido:** Reducción del tiempo de testing manual de X horas a una ejecución automatizada de Y segundos
 
 - **Debugging:** Uso de la funcionalidad de Time Travel Debugging de Cypress para simplificar la identificación y reporte de defectos.
